@@ -21,6 +21,7 @@ export default function Home() {
         <Box className="bg-blue-100">box2</Box>
         <Box className="bg-blue-100">box3</Box>
       </Stack>
+
     </>
   );
 }
