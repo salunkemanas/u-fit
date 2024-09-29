@@ -1,7 +1,7 @@
 import { PropsWithChildren, ReactNode } from "react";
 
 type TypographyProps = {
-  variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  variant: "h1" | "h2" | "h3" | "h4" | "p" | "blockquote" | "lead" | "large" | "small" | "muted";
 };
 
 function TypographyH1(props: { children: ReactNode }) {
@@ -28,6 +28,62 @@ export function TypographyH3(props: { children: ReactNode }) {
   );
 }
 
+export function TypographyH4(props: { children: ReactNode }) {
+  return (
+    <h4 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+      {props.children}
+    </h4>
+  );
+}
+
+export function TypographyP(props: { children: ReactNode }) {
+  return (
+    <p className="">
+      {props.children}
+    </p>
+  )
+}
+
+export function TypographyBlockquote(props : { children:ReactNode }) {
+  return (
+    <blockquote className="italic">
+      {props.children}
+    </blockquote>
+  )
+}
+
+export function TypographyLead(props : { children:ReactNode }) {
+  return (
+    <p className="text-xl text-muted-foreground">
+      {props.children}
+    </p>
+  )
+}
+
+export function TypographyLarge(props : { children:ReactNode }) {
+  return (
+  <div className="text-lg font-semibold">
+    {props.children}
+  </div>
+  )
+}
+
+export function TypographySmall(props : { children:ReactNode }) {
+  return (
+    <small className="text-sm font-medium leading-none">
+      {props.children}
+    </small>
+  )
+}
+
+export function TypographyMuted(props : { children:ReactNode }) {
+  return (
+    <p className="text-sm text-muted-foreground">
+      {props.children}
+    </p>
+  )
+}
+
 const TypographyComponents: Record<
   string,
   (props: { children: ReactNode }) => JSX.Element
@@ -35,6 +91,15 @@ const TypographyComponents: Record<
   h1: TypographyH1,
   h2: TypographyH2,
   h3: TypographyH3,
+  h4: TypographyH4,
+  p : TypographyP,
+  blockquote : TypographyBlockquote,
+  lead: TypographyLead,
+  large: TypographyLarge,
+  small: TypographySmall,
+  muted: TypographyMuted
+
+
 };
 
 export default function Typography(props: PropsWithChildren<TypographyProps>) {
