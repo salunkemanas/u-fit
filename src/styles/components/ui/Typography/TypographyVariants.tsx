@@ -10,7 +10,7 @@ function TypographyH1(props: { children: ReactNode }) {
 
 function TypographyH2(props: { children: ReactNode }) {
   return (
-    <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0">
+    <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight mt-0">
       {props.children}
     </h2>
   );
