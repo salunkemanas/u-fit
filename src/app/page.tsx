@@ -1,4 +1,6 @@
 import Typography from "@/styles/components/ui/Typography";
+import Box from "@/styles/components/ui/Box";
+import Stack from "@/styles/components/ui/Stack";
 
 export default function Home() {
   return (
@@ -13,6 +15,12 @@ export default function Home() {
       <Typography variant="large">This is the large</Typography>
       <Typography variant="small">This is the small</Typography>
       <Typography variant="muted">This is the muted</Typography>
+      <Box className="w-full">This is a BOX</Box>
+      <Stack direction="column" gap="gap-6" className="p-8">
+        <Box className="bg-blue-100">box1</Box>
+        <Box className="bg-blue-100">box2</Box>
+        <Box className="bg-blue-100">box3</Box>
+      </Stack>
     </>
   );
 }
