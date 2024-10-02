@@ -36,6 +36,8 @@ const stackClasses = cva("flex", {
   defaultVariants: {
     direction: "row",
     gap: "default",
+    gapX: "default",
+    gapY: "default",
   },
 });
 
