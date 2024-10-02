@@ -42,6 +42,10 @@
       "indentStyle": "space",
       "trailingCommas": "none"
     }
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "ignore": ["src/generated"]
   }
 }
 {
