@@ -8,7 +8,7 @@ const stackClasses = cva("flex", {
       column: "flex-col",
     },
     gap: {
-      default: "gap-0",
+      none: "gap-0",
       xxs: "gap-1",
       xs: "gap-2",
       sm: "gap-3",
@@ -20,7 +20,7 @@ const stackClasses = cva("flex", {
       "4xl": "gap-9",
     },
     gapX: {
-      default: "gap-x-0",
+      none: "gap-x-0",
       xxs: "gap-x-1",
       xs: "gap-x-2",
       sm: "gap-x-3",
@@ -32,7 +32,7 @@ const stackClasses = cva("flex", {
       "4xl": "gap-9",
     },
     gapY: {
-      default: "gap-y-0",
+      none: "gap-y-0",
       xxs: "gap-y-1",
       xs: "gap-y-2",
       sm: "gap-y-3",
@@ -47,9 +47,9 @@ const stackClasses = cva("flex", {
   // Define default variants
   defaultVariants: {
     direction: "row",
-    gap: "default",
-    gapX: "default",
-    gapY: "default",
+    gap: "none",
+    gapX: "none",
+    gapY: "none",
   },
 });
 
