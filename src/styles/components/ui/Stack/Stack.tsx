@@ -13,7 +13,11 @@ const stackClasses = cva("flex", {
       xs: "gap-2",
       sm: "gap-3",
       md: "gap-4",
-      lg: "gap-6",
+      lg: "gap-5",
+      xl: "gap-6",
+      "2xl": "gap-7",
+      "3xl": "gap-8",
+      "4xl": "gap-9",
     },
     gapX: {
       default: "gap-x-0",
@@ -22,6 +26,10 @@ const stackClasses = cva("flex", {
       sm: "gap-x-3",
       md: "gap-x-4",
       lg: "gap-x-6",
+      xl: "gap-6",
+      "2xl": "gap-7",
+      "3xl": "gap-8",
+      "4xl": "gap-9",
     },
     gapY: {
       default: "gap-y-0",
@@ -30,6 +38,10 @@ const stackClasses = cva("flex", {
       sm: "gap-y-3",
       md: "gap-y-4",
       lg: "gap-y-6",
+      xl: "gap-6",
+      "2xl": "gap-7",
+      "3xl": "gap-8",
+      "4xl": "gap-9",
     },
   },
   // Define default variants
@@ -44,9 +56,9 @@ const stackClasses = cva("flex", {
 type StackProps = {
   className?: string;
   direction?: "row" | "column";
-  gapX?: "xxs" | "xs" | "sm" | "md" | "lg";
-  gapY?: "xxs" | "xs" | "sm" | "md" | "lg";
-  gap?: "xxs" | "xs" | "sm" | "md" | "lg";
+  gapX?: "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl";
+  gapY?: "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl";
+  gap?: "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl";
 };
 
 function Stack(props: PropsWithChildren<StackProps>) {
