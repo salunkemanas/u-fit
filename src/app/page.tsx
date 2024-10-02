@@ -16,7 +16,7 @@ export default function Home() {
       <Typography variant="small">This is the small</Typography>
       <Typography variant="muted">This is the muted</Typography>
       <Box className="w-full">This is a BOX</Box>
-      <Stack direction="row" gapX="4xl" className="p-8">
+      <Stack>
         <Box className="bg-blue-100">box1</Box>
         <Box className="bg-blue-100">box2</Box>
         <Box className="bg-blue-100">box3</Box>

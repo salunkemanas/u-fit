@@ -44,10 +44,9 @@ const stackClasses = cva("flex", {
       "4xl": "gap-y-9",
     },
   },
-  // Define default variants
+
   defaultVariants: {
     direction: "row",
-    gap: "none",
     gapX: "none",
     gapY: "none",
   },
@@ -79,13 +78,7 @@ function Stack(props: PropsWithChildren<StackProps>) {
     gapX: props.gapX,
     gapY: props.gapY,
   });
-  return (
-    <div
-      className={`flex flex-${props.direction} ${props.className} ${stackClass}`}
-    >
-      {props.children}
-    </div>
-  );
+  return <div className={stackClass}>{props.children}</div>;
 }
 
 export default Stack;
