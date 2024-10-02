@@ -8,11 +8,13 @@
     "start": "next start",
     "lint": "biome lint",
     "format": "biome format",
-    "write": "biome write",
-    "prepare": "husky install"
+    "write": "biome write"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json}": ["biome format --write", "biome lint --write"]
+  "lint-staged":{
+    "*.{js,jsx,ts,tsx,json}": [
+      "biome format",
+      "biome lint"
+    ]
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.0",
@@ -36,6 +38,7 @@
     "clsx": "^2.1.1",
     "cmdk": "1.0.0",
     "embla-carousel-react": "^8.3.0",
+    "lint-staged": "12.3.2",
     "lucide-react": "^0.446.0",
     "next": "14.2.13",
     "next-themes": "^0.3.0",
@@ -50,8 +53,6 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.2.10",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
