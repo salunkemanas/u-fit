@@ -3,9 +3,10 @@ import { Button as BaseButton, ButtonProps } from "../../base/button";
 
 type MyButtonProps = Pick<
   ButtonProps,
-  "onClick" | "disabled" | "variant" | "size"
+  "onClick" | "disabled" | "variant" | "size" | "color" | "className"
 >;
 
 export default function Button(props: PropsWithChildren<MyButtonProps>) {
-  return <BaseButton>{props.children}</BaseButton>;
+  const { children, ...rest } = props;
+  return <BaseButton {...rest}>{children}</BaseButton>;
 }
