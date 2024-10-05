@@ -1,4 +1,4 @@
-import Typography from "@/styles/components/ui/Typography";
+import Typography from '@/styles/components/ui/Typography';
 import Box from "@/styles/components/ui/Box";
 import Stack from "@/styles/components/ui/Stack";
 
@@ -21,6 +21,8 @@ export default function Home() {
         <Box className="bg-blue-100">box2</Box>
         <Box className="bg-blue-100">box3</Box>
       </Stack>
+
+      <div className=" h-[100px] w-[100px] max-w-screen-2xl text-brand-500">abc</div>
     </>
   );
 }
