@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 import { cva } from "class-variance-authority";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";

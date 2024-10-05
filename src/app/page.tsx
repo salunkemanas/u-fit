@@ -1,5 +1,3 @@
-"use client";
-
 import Typography from "@/styles/components/ui/Typography";
 import Box from "@/styles/components/ui/Box";
 import Stack from "@/styles/components/ui/Stack";
