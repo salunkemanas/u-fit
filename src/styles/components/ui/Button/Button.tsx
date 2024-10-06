@@ -1,5 +1,5 @@
-import { PropsWithChildren } from "react";
-import { Button as BaseButton, ButtonProps } from "../../base/button";
+import type { PropsWithChildren } from "react";
+import { Button as BaseButton, type ButtonProps } from "../../base/button";
 
 type MyButtonProps = Pick<
   ButtonProps,
