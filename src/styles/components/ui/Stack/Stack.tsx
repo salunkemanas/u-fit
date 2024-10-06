@@ -1,5 +1,8 @@
 import { PropsWithChildren } from "react";
 import { cva } from "class-variance-authority";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
+import { cn } from "../../base/lib/utils";
 
 const stackClasses = cva("flex", {
   variants: {
@@ -44,15 +47,13 @@ const stackClasses = cva("flex", {
       "4xl": "gap-y-9",
     },
   },
-
   defaultVariants: {
     direction: "row",
-    gapX: "none",
-    gapY: "none",
   },
 });
 
 type gapVariants =
+  | "none"
   | "xxs"
   | "xs"
   | "sm"
@@ -72,13 +73,15 @@ type StackProps = {
 };
 
 function Stack(props: PropsWithChildren<StackProps>) {
-  const stackClass = stackClasses({
-    direction: props.direction,
-    gap: props.gap,
-    gapX: props.gapX,
-    gapY: props.gapY,
-  });
-  return <div className={stackClass}>{props.children}</div>;
+  const { direction, gap, gapX, gapY, className, children } = props;
+  const baseClass = stackClasses({ direction });
+  const gapClasses = cn(
+    gap ? stackClasses({ gap }) : null,
+    gapX ? stackClasses({ gapX }) : null,
+    gapY ? stackClasses({ gapY }) : null
+  );
+  const mergedClasses = twMerge(baseClass, gapClasses, className);
+  return <div className={mergedClasses}>{children}</div>;
 }
 
 export default Stack;
