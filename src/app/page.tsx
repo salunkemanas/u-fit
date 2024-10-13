@@ -1,12 +1,41 @@
-import Stack from "@/styles/components/ui/Stack";
-import SideNav from "@/styles/components/ui/SideNav";
-import TopNav from "@/styles/components/ui/TopNav";
+import Typography from "@/styles/components/ui/Typography";
 
 export default function Home() {
   return (
-    <Stack direction="column">
-      <TopNav />
-      <SideNav />
-    </Stack>
+    <Typography variant="h1">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, soluta
+      recusandae! Ea earum blanditiis fugiat alias? Culpa repudiandae, quisquam
+      impedit doloremque aspernatur porro placeat, repellendus a earum voluptas
+      vitae alias. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      Rem, soluta recusandae! Ea earum blanditiis fugiat alias? Culpa
+      repudiandae, quisquam impedit doloremque aspernatur porro placeat,
+      repellendus a earum voluptas vitae alias. Lorem ipsum, dolor sit amet
+      consectetur adipisicing elit. Rem, soluta recusandae! Ea earum blanditiis
+      fugiat alias? Culpa repudiandae, quisquam impedit doloremque aspernatur
+      porro placeat, repellendus a earum voluptas vitae alias. Lorem ipsum,
+      dolor sit amet consectetur adipisicing elit. Rem, soluta recusandae! Ea
+      earum blanditiis fugiat alias? Culpa repudiandae, quisquam impedit
+      doloremque aspernatur porro placeat, repellendus a earum voluptas vitae
+      alias. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem,
+      soluta recusandae! Ea earum blanditiis fugiat alias? Culpa repudiandae,
+      quisquam impedit doloremque aspernatur porro placeat, repellendus a earum
+      voluptas vitae alias. Lorem ipsum, dolor sit amet consectetur adipisicing
+      elit. Rem, soluta recusandae! Ea earum blanditiis fugiat alias? Culpa
+      repudiandae, quisquam impedit doloremque aspernatur porro placeat,
+      repellendus a earum voluptas vitae alias. Lorem ipsum, dolor sit amet
+      consectetur adipisicing elit. Rem, soluta recusandae! Ea earum blanditiis
+      fugiat alias? Culpa repudiandae, quisquam impedit doloremque aspernatur
+      porro placeat, repellendus a earum voluptas vitae alias. Lorem ipsum,
+      dolor sit amet consectetur adipisicing elit. Rem, soluta recusandae! Ea
+      earum blanditiis fugiat alias? Culpa repudiandae, quisquam impedit
+      doloremque aspernatur porro placeat, repellendus a earum voluptas vitae
+      alias. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem,
+      soluta recusandae! Ea earum blanditiis fugiat alias? Culpa repudiandae,
+      quisquam impedit doloremque aspernatur porro placeat, repellendus a earum
+      voluptas vitae alias. Lorem ipsum, dolor sit amet consectetur adipisicing
+      elit. Rem, soluta recusandae! Ea earum blanditiis fugiat alias? Culpa
+      repudiandae, quisquam impedit doloremque aspernatur porro placeat,
+      repellendus a earum voluptas vitae alias.
+    </Typography>
   );
 }
