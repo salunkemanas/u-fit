@@ -74,13 +74,18 @@ type StackProps = {
 
 function Stack(props: PropsWithChildren<StackProps>) {
   const { direction, gap, gapX, gapY, className, children } = props;
-  const baseClass = stackClasses({ direction });
-  const gapClasses = cn(
-    gap ? stackClasses({ gap }) : null,
-    gapX ? stackClasses({ gapX }) : null,
-    gapY ? stackClasses({ gapY }) : null
-  );
-  const mergedClasses = twMerge(baseClass, gapClasses, className);
+  const baseClass = stackClasses({
+    direction,
+    gap: gap || undefined,
+    gapX: gapX || undefined,
+    gapY: gapY || undefined,
+  });
+  // const gapClasses = cn(
+  //   gap ? stackClasses({ gap }) : null,
+  //   gapX ? stackClasses({ gapX }) : null,
+  //   gapY ? stackClasses({ gapY }) : null
+  // );
+  const mergedClasses = twMerge(baseClass, className);
   return <div className={mergedClasses}>{children}</div>;
 }
 
