@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Stack from "@/styles/components/ui/Stack";
-import Box from "@/styles/components/ui/Box";
 import TopNav from "@/styles/components/ui/TopNav";
 import SideNav from "@/styles/components/ui/SideNav";
 
@@ -33,15 +32,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Stack direction="column" className="w-screen h-screen">
-          <Box className="h-20 w-full fixed top-0 left-0 z-50 bg-white border-b">
+        <Stack direction="column" className="w-screen h-screen overflow-hidden">
+          <Stack className="h-[65px] w-full bg-white border-b">
             <TopNav />
-          </Box>
-          <Stack className="mt-20">
-            <Box className="w-2/12 h-full fixed top-20 left-0 z-60 border-r">
+          </Stack>
+          <Stack className="size-full">
+            <Stack className="w-1/6 h-[calc(100vh-65px)] border-r justify-center">
               <SideNav />
-            </Box>
-            <Box className="w-10/12 ml-[17%] p-3">{children}</Box>
+            </Stack>
+            <Stack className="w-5/6 p-3 overflow-auto h-[calc(100vh-65px)]">
+              {children}
+            </Stack>
           </Stack>
         </Stack>
       </body>

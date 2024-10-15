@@ -1,6 +1,6 @@
-import Box from "@/styles/components/ui/Box";
 import Stack from "@/styles/components/ui/Stack";
 import { Home, LineChart, Package, ShoppingCart, Users } from "lucide-react";
+import Typography from "@/styles/components/ui/Typography";
 
 export default function SideNav() {
   const navElements = [
@@ -14,18 +14,18 @@ export default function SideNav() {
     <Stack
       direction="column"
       gapY="md"
-      className="bg-white h-full items-start shadow-md justify-center w-full"
+      className="bg-white size-full items-start shadow-md justify-center"
     >
       {navElements.map((elem) => {
         const Icon = elem.icon;
         return (
-          <Box
+          <Stack
             key={elem.name}
-            className="flex items-center gap-x-2 w-full pl-4 py-2 text-gray-600 font-medium transition-all hover:text-blue-600 hover:bg-blue-50 hover:cursor-pointer"
+            className="items-center gap-x-2 w-full pl-4 py-2 text-gray-600 font-medium transition-all hover:text-blue-600 hover:bg-blue-50 hover:cursor-pointer"
           >
             <Icon className="size-5" />
-            {elem.name}
-          </Box>
+            <Typography variant="muted">{elem.name}</Typography>
+          </Stack>
         );
       })}
     </Stack>
