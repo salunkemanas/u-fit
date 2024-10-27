@@ -38,7 +38,69 @@ body {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
+
+    /* custom palette */
+    --palette-brand-50: #f3eafa;
+    --palette-brand-100: #e4d1f5;
+    --palette-brand-200: #c9a3ea;
+    --palette-brand-300: #b17ae1;
+    --palette-brand-400: #964cd7;
+    --palette-brand-500: #7a2bbf;
+    --palette-brand-600: #62239a;
+    --palette-brand-700: #4a1a75;
+    --palette-brand-800: #30114b;
+    --palette-brand-900: #180825;
+    --palette-brand-950: #0d0515;
+
+    --palette-success-50: #e4fbed;
+    --palette-success-100: #c5f7d7;
+    --palette-success-200: #8ff0b2;
+    --palette-success-300: #54e88a;
+    --palette-success-400: #1edc64;
+    --palette-success-500: #16a34a;
+    --palette-success-600: #12823b;
+    --palette-success-700: #0d632d;
+    --palette-success-800: #09431e;
+    --palette-success-900: #041f0e;
+    --palette-success-950: #021208;
+
+    --palette-warning-50: #fef5e1;
+    --palette-warning-100: #feebc3;
+    --palette-warning-200: #fdd787;
+    --palette-warning-300: #fbc44b;
+    --palette-warning-400: #fab00f;
+    --palette-warning-500: #ca8a04;
+    --palette-warning-600: #a06e03;
+    --palette-warning-700: #785302;
+    --palette-warning-800: #503702;
+    --palette-warning-900: #281c01;
+    --palette-warning-950: #140e00;
+
+    --palette-error-50: #fbe9e9;
+    --palette-error-100: #f8d3d3;
+    --palette-error-200: #f1a7a7;
+    --palette-error-300: #ea7b7b;
+    --palette-error-400: #e34f4f;
+    --palette-error-500: #dc2626;
+    --palette-error-600: #b01c1c;
+    --palette-error-700: #841515;
+    --palette-error-800: #580e0e;
+    --palette-error-900: #2c0707;
+    --palette-error-950: #160404;
+
+    --palette-neutral-50: #ebedf0;
+    --palette-neutral-100: #d9dde2;
+    --palette-neutral-200: #b4bbc6;
+    --palette-neutral-300: #8b97a7;
+    --palette-neutral-400: #677588;
+    --palette-neutral-500: #4b5563;
+    --palette-neutral-600: #3b434e;
+    --palette-neutral-700: #2c323a;
+    --palette-neutral-800: #1f2329;
+    --palette-neutral-900: #0f1114;
+    --palette-neutral-950: #070709;
+
+    --radius: 8px;
   }
   .dark {
     --background: 222.2 84% 4.9%;
