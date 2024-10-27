@@ -13,6 +13,8 @@ type TypographyProps = {
     | "large"
     | "small"
     | "muted";
+
+  className?: string;
 };
 
 export default function Typography(props: PropsWithChildren<TypographyProps>) {
@@ -20,5 +22,5 @@ export default function Typography(props: PropsWithChildren<TypographyProps>) {
 
   const Component = TypographyComponentsVariantsMap[variant];
 
-  return <Component>{props.children}</Component>;
+  return <Component className={props.className}>{props.children}</Component>;
 }

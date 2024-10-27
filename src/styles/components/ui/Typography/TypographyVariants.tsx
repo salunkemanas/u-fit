@@ -1,66 +1,76 @@
+import { clsx } from "clsx";
 import { ReactNode } from "react";
 
-function TypographyH1(props: { children: ReactNode }) {
-  return (
-    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-      {props.children}
-    </h1>
+type TypographVariantProps = {
+  children: ReactNode;
+  className?: string;
+};
+
+function TypographyH1(props: TypographVariantProps) {
+  const className = clsx(
+    "scroll-m-20 text-5xl font-extrabold tracking-tight",
+    props.className,
   );
+  return <h1 className={className}>{props.children}</h1>;
 }
 
-function TypographyH2(props: { children: ReactNode }) {
-  return (
-    <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight mt-0">
-      {props.children}
-    </h2>
+function TypographyH2(props: TypographVariantProps) {
+  const className = clsx(
+    "scroll-m-20 text-3xl font-semibold tracking-tight",
+    props.className,
   );
+  return <h2 className={className}>{props.children}</h2>;
 }
 
-function TypographyH3(props: { children: ReactNode }) {
-  return (
-    <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-      {props.children}
-    </h3>
+function TypographyH3(props: TypographVariantProps) {
+  const className = clsx(
+    "scroll-m-20 text-2xl font-semibold tracking-tight",
+    props.className,
   );
+  return <h3 className={className}>{props.children}</h3>;
 }
 
-function TypographyH4(props: { children: ReactNode }) {
-  return (
-    <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-      {props.children}
-    </h4>
+function TypographyH4(props: TypographVariantProps) {
+  const className = clsx(
+    "scroll-m-20 text-xl font-semibold tracking-tight",
+    props.className,
   );
+  return <h4 className={className}>{props.children}</h4>;
 }
 
-function TypographyP(props: { children: ReactNode }) {
-  return <p>{props.children}</p>;
+function TypographyP(props: TypographVariantProps) {
+  const className = clsx("", props.className);
+  return <p className={className}>{props.children}</p>;
 }
 
-function TypographyBlockquote(props: { children: ReactNode }) {
-  return <blockquote className="italic">{props.children}</blockquote>;
+function TypographyBlockquote(props: TypographVariantProps) {
+  const className = clsx("italic", props.className);
+  return <blockquote className={className}>{props.children}</blockquote>;
 }
 
-function TypographyLead(props: { children: ReactNode }) {
-  return <p className="text-xl text-muted-foreground">{props.children}</p>;
+function TypographyLead(props: TypographVariantProps) {
+  const className = clsx("text-xl text-muted-foreground", props.className);
+  return <p className={className}>{props.children}</p>;
 }
 
-function TypographyLarge(props: { children: ReactNode }) {
-  return <div className="text-lg font-semibold">{props.children}</div>;
+function TypographyLarge(props: TypographVariantProps) {
+  const className = clsx("text-lg font-semibold", props.className);
+  return <div className={className}>{props.children}</div>;
 }
 
-function TypographySmall(props: { children: ReactNode }) {
-  return (
-    <small className="text-sm font-medium leading-none">{props.children}</small>
-  );
+function TypographySmall(props: TypographVariantProps) {
+  const className = clsx("text-sm font-medium leading-none", props.className);
+  return <small className={className}>{props.children}</small>;
 }
 
-function TypographyMuted(props: { children: ReactNode }) {
-  return <p className="text-sm text-muted-foreground">{props.children}</p>;
+function TypographyMuted(props: TypographVariantProps) {
+  const className = clsx("text-sm text-muted-foreground", props.className);
+  return <p className={className}>{props.children}</p>;
 }
 
 const TypographyComponentsVariantsMap: Record<
   string,
-  (props: { children: ReactNode }) => JSX.Element
+  (props: TypographVariantProps) => JSX.Element
 > = {
   h1: TypographyH1,
   h2: TypographyH2,
