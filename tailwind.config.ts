@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: "class", // overriding the default [], and using just string -- @abhishek
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,6 +10,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // ref: https://tailwindcss.com/docs/screens#using-custom-screen-names
+      screens: {
+        // => @media (min-width: 640px) { ... }
+        tablet: "640px",
+
+        // => @media (min-width: 1024px) { ... }
+        laptop: "1024px",
+
+        // => @media (min-width: 1280px) { ... }
+        desktop: "1280px",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -236,6 +247,17 @@ const config: Config = {
         sm: "calc(var(--radius) - 2px)",
         xs: "calc(var(--radius) - 4px)",
         xxs: "calc(var(--radius) - 6px)",
+        none: "0",
+      },
+      spacing: {
+        xxxl: "32px",
+        xxl: "28px",
+        xl: "24px",
+        lg: "20px",
+        md: "16px",
+        sm: "12px",
+        xs: "8px",
+        xxs: "4px",
         none: "0",
       },
       keyframes: {
