@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Stack from "@/styles/components/ui/Stack";
-import TopNav from "@/styles/components/ui/TopNav";
-import SideNav from "@/styles/components/ui/SideNav";
+import TopNav from "@/components/TopNav";
+import SideNav from "@/components/SideNav";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -40,7 +40,7 @@ export default function RootLayout({
             <Stack className="w-1/6 h-full border-r justify-center">
               <SideNav />
             </Stack>
-            <Stack className="size-full p-xs overflow-auto">{children}</Stack>
+            <Stack className="size-full p-xs overflow-y-auto">{children}</Stack>
           </Stack>
         </Stack>
       </body>

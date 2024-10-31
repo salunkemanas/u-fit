@@ -1,17 +1,18 @@
-import Stack from "@/styles/components/ui/Stack";
-import { Home, LineChart, Package, ShoppingCart, Users } from "lucide-react";
-import Typography from "@/styles/components/ui/Typography";
 import clsx from "clsx";
-import Button from "../Button";
+import { Home, LineChart, Package, ShoppingCart, Users } from "lucide-react";
+import Stack from "@/styles/components/ui/Stack";
+import Typography from "@/styles/components/ui/Typography";
+import Button from "@/styles/components/ui/Button";
+
+const navElements = [
+  { name: "Dashboard", icon: Home },
+  { name: "Orders", icon: ShoppingCart },
+  { name: "Products", icon: Package },
+  { name: "Customers", icon: Users },
+  { name: "Analytics", icon: LineChart },
+];
 
 export default function SideNav() {
-  const navElements = [
-    { name: "Dashboard", icon: Home },
-    { name: "Orders", icon: ShoppingCart },
-    { name: "Products", icon: Package },
-    { name: "Customers", icon: Users },
-    { name: "Analytics", icon: LineChart },
-  ];
   return (
     <Stack
       direction="column"
