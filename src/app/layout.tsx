@@ -30,19 +30,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
         <Stack direction="column" className="w-screen h-screen overflow-hidden">
-          <Stack className="h-[65px] w-full bg-white border-b">
+          <Stack className="h-16 w-full border-b">
             <TopNav />
           </Stack>
           <Stack className="size-full">
-            <Stack className="w-1/6 h-[calc(100vh-65px)] border-r justify-center">
+            <Stack className="w-1/6 h-full border-r justify-center">
               <SideNav />
             </Stack>
-            <Stack className="w-5/6 p-3 overflow-auto h-[calc(100vh-65px)]">
-              {children}
-            </Stack>
+            <Stack className="size-full p-xs overflow-auto">{children}</Stack>
           </Stack>
         </Stack>
       </body>

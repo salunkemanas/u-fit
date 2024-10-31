@@ -1,6 +1,8 @@
 import Stack from "@/styles/components/ui/Stack";
 import { Home, LineChart, Package, ShoppingCart, Users } from "lucide-react";
 import Typography from "@/styles/components/ui/Typography";
+import clsx from "clsx";
+import Button from "../Button";
 
 export default function SideNav() {
   const navElements = [
@@ -13,19 +15,22 @@ export default function SideNav() {
   return (
     <Stack
       direction="column"
-      gapY="md"
-      className="bg-white size-full items-start shadow-md justify-center"
+      className="size-full items-start gap-y-sm justify-center"
     >
       {navElements.map((elem) => {
         const Icon = elem.icon;
         return (
-          <Stack
+          <Button
             key={elem.name}
-            className="items-center gap-x-2 w-full pl-4 py-2 text-gray-600 font-medium transition-all hover:text-blue-600 hover:bg-blue-50 hover:cursor-pointer"
+            className={clsx(
+              "items-center gap-x-xs w-full px-xs font-medium transition-all",
+              "!rounded-none justify-start py-sm",
+            )}
+            variant="ghost"
           >
-            <Icon className="size-5" />
-            <Typography variant="muted">{elem.name}</Typography>
-          </Stack>
+            <Icon className="size-6" />
+            <Typography variant="large">{elem.name}</Typography>
+          </Button>
         );
       })}
     </Stack>
