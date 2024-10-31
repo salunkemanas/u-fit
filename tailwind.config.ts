@@ -9,18 +9,29 @@ const config: Config = {
     "./src/styles/**",
   ],
   theme: {
+    spacing: {
+      xxxl: "32px",
+      xxl: "28px",
+      xl: "24px",
+      lg: "20px",
+      md: "16px",
+      sm: "12px",
+      xs: "8px",
+      xxs: "4px",
+      none: "0",
+    },
+    // ref: https://tailwindcss.com/docs/screens#using-custom-screen-names
+    screens: {
+      // => @media (min-width: 640px) { ... }
+      tablet: "640px",
+
+      // => @media (min-width: 1024px) { ... }
+      laptop: "1024px",
+
+      // => @media (min-width: 1280px) { ... }
+      desktop: "1280px",
+    },
     extend: {
-      // ref: https://tailwindcss.com/docs/screens#using-custom-screen-names
-      screens: {
-        // => @media (min-width: 640px) { ... }
-        tablet: "640px",
-
-        // => @media (min-width: 1024px) { ... }
-        laptop: "1024px",
-
-        // => @media (min-width: 1280px) { ... }
-        desktop: "1280px",
-      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -63,74 +74,148 @@ const config: Config = {
           "5": "hsl(var(--chart-5))",
         },
 
+        white: "var(--white)",
+        black: "var(--black)",
+        transparent: "var(--transparent)",
+
         /* custom colors */
         // lightest, lighter, light
         // soft, medium, bold
         // dark, darker, darkest
         brand: {
-          50: "#F3EAFA", // lightest
-          100: "#E4D1F5", // lighter
-          200: "#C9A3EA", // light
-          300: "#B17AE1",
-          400: "#964CD7", // soft
-          500: "#7A2BBF", // medium
-          600: "#62239A", // bold
-          700: "#4A1A75",
-          800: "#30114B", // dark
-          900: "#180825", // darker
-          950: "#0D0515", // darkest
+          50: "var(--palette-brand-50)", // lightest
+          100: "var(--palette-brand-100)", // lighter
+          200: "var(--palette-brand-200)", // light
+          300: "var(--palette-brand-300)",
+          400: "var(--palette-brand-400)", // soft
+          500: "var(--palette-brand-500)", // medium
+          600: "var(--palette-brand-600)", // bold
+          700: "var(--palette-brand-700)",
+          800: "var(--palette-brand-800)", // dark
+          900: "var(--palette-brand-900)", // darker
+          950: "var(--palette-brand-950)", // darkest
+
+          alpha: {
+            5: "var(--palette-brand-alpha-5)",
+            10: "var(--palette-brand-alpha-10)",
+            20: "var(--palette-brand-alpha-20)",
+            30: "var(--palette-brand-alpha-30)",
+            40: "var(--palette-brand-alpha-40)",
+            50: "var(--palette-brand-alpha-50)",
+            60: "var(--palette-brand-alpha-60)",
+            70: "var(--palette-brand-alpha-70)",
+            80: "var(--palette-brand-alpha-80)",
+            90: "var(--palette-brand-alpha-90)",
+            95: "var(--palette-brand-alpha-95)",
+          },
         },
         success: {
-          50: "#E4FBED",
-          100: "#C5F7D7",
-          200: "#8FF0B2",
-          300: "#54E88A",
-          400: "#1EDC64",
-          500: "#16A34A",
-          600: "#12823B",
-          700: "#0D632D",
-          800: "#09431E",
-          900: "#041F0E",
-          950: "#021208",
+          50: "var(--palette-success-50)",
+          100: "var(--palette-success-100)",
+          200: "var(--palette-success-200)",
+          300: "var(--palette-success-300)",
+          400: "var(--palette-success-400)",
+          500: "var(--palette-success-500)",
+          600: "var(--palette-success-600)",
+          700: "var(--palette-success-700)",
+          800: "var(--palette-success-800)",
+          900: "var(--palette-success-900)",
+          950: "var(--palette-success-950)",
+
+          alpha: {
+            5: "var(--palette-success-alpha-5)",
+            10: "var(--palette-success-alpha-10)",
+            20: "var(--palette-success-alpha-20)",
+            30: "var(--palette-success-alpha-30)",
+            40: "var(--palette-success-alpha-40)",
+            50: "var(--palette-success-alpha-50)",
+            60: "var(--palette-success-alpha-60)",
+            70: "var(--palette-success-alpha-70)",
+            80: "var(--palette-success-alpha-80)",
+            90: "var(--palette-success-alpha-90)",
+            95: "var(--palette-success-alpha-95)",
+          },
         },
         warning: {
-          50: "#FEF5E1",
-          100: "#FEEBC3",
-          200: "#FDD787",
-          300: "#FBC44B",
-          400: "#FAB00F",
-          500: "#CA8A04",
-          600: "#A06E03",
-          700: "#785302",
-          800: "#503702",
-          900: "#281C01",
-          950: "#140E00",
+          50: "var(--palette-warning-50)",
+          100: "var(--palette-warning-100)",
+          200: "var(--palette-warning-200)",
+          300: "var(--palette-warning-300)",
+          400: "var(--palette-warning-400)",
+          500: "var(--palette-warning-500)",
+          600: "var(--palette-warning-600)",
+          700: "var(--palette-warning-700)",
+          800: "var(--palette-warning-800)",
+          900: "var(--palette-warning-900)",
+          950: "var(--palette-warning-950)",
+
+          alpha: {
+            5: "var(--palette-warning-alpha-5)",
+            10: "var(--palette-warning-alpha-10)",
+            20: "var(--palette-warning-alpha-20)",
+            30: "var(--palette-warning-alpha-30)",
+            40: "var(--palette-warning-alpha-40)",
+            50: "var(--palette-warning-alpha-50)",
+            60: "var(--palette-warning-alpha-60)",
+            70: "var(--palette-warning-alpha-70)",
+            80: "var(--palette-warning-alpha-80)",
+            90: "var(--palette-warning-alpha-90)",
+            95: "var(--palette-warning-alpha-95)",
+          },
         },
         error: {
-          50: "#FBE9E9",
-          100: "#F8D3D3",
-          200: "#F1A7A7",
-          300: "#EA7B7B",
-          400: "#E34F4F",
-          500: "#DC2626",
-          600: "#B01C1C",
-          700: "#841515",
-          800: "#580E0E",
-          900: "#2C0707",
-          950: "#160404",
+          50: "var(--palette-error-50)",
+          100: "var(--palette-error-100)",
+          200: "var(--palette-error-200)",
+          300: "var(--palette-error-300)",
+          400: "var(--palette-error-400)",
+          500: "var(--palette-error-500)",
+          600: "var(--palette-error-600)",
+          700: "var(--palette-error-700)",
+          800: "var(--palette-error-800)",
+          900: "var(--palette-error-900)",
+          950: "var(--palette-error-950)",
+
+          alpha: {
+            5: "var(--palette-error-alpha-5)",
+            10: "var(--palette-error-alpha-10)",
+            20: "var(--palette-error-alpha-20)",
+            30: "var(--palette-error-alpha-30)",
+            40: "var(--palette-error-alpha-40)",
+            50: "var(--palette-error-alpha-50)",
+            60: "var(--palette-error-alpha-60)",
+            70: "var(--palette-error-alpha-70)",
+            80: "var(--palette-error-alpha-80)",
+            90: "var(--palette-error-alpha-90)",
+            95: "var(--palette-error-alpha-95)",
+          },
         },
         neutral: {
-          50: "#EBEDF0",
-          100: "#D9DDE2",
-          200: "#B4BBC6",
-          300: "#8B97A7",
-          400: "#677588",
-          500: "#4B5563",
-          600: "#3B434E",
-          700: "#2C323A",
-          800: "#1F2329",
-          900: "#0F1114",
-          950: "#070709",
+          50: "var(--palette-neutral-50)",
+          100: "var(--palette-neutral-100)",
+          200: "var(--palette-neutral-200)",
+          300: "var(--palette-neutral-300)",
+          400: "var(--palette-neutral-400)",
+          500: "var(--palette-neutral-500)",
+          600: "var(--palette-neutral-600)",
+          700: "var(--palette-neutral-700)",
+          800: "var(--palette-neutral-800)",
+          900: "var(--palette-neutral-900)",
+          950: "var(--palette-neutral-950)",
+
+          alpha: {
+            5: "var(--palette-neutral-alpha-5)",
+            10: "var(--palette-neutral-alpha-10)",
+            20: "var(--palette-neutral-alpha-20)",
+            30: "var(--palette-neutral-alpha-30)",
+            40: "var(--palette-neutral-alpha-40)",
+            50: "var(--palette-neutral-alpha-50)",
+            60: "var(--palette-neutral-alpha-60)",
+            70: "var(--palette-neutral-alpha-70)",
+            80: "var(--palette-neutral-alpha-80)",
+            90: "var(--palette-neutral-alpha-90)",
+            95: "var(--palette-neutral-alpha-95)",
+          },
         },
       },
       backgroundColor: {
@@ -165,6 +250,24 @@ const config: Config = {
           secondary: "var(--palette-error-500)",
           primary: "var(--palette-error-600)",
         },
+      },
+      fontSize: {
+        xxl: "30px",
+        xl: "24px",
+        lg: "20px",
+        md: "16px",
+        sm: "14px",
+        xs: "12px",
+        xxs: "10px",
+      },
+      lineHeight: {
+        xxl: "40px",
+        xl: "32px",
+        lg: "28px",
+        md: "24px",
+        sm: "20px",
+        xs: "16px",
+        xxs: "14px",
       },
       textColor: {
         // primary, secondary, tertiary, quaternary
@@ -208,34 +311,34 @@ const config: Config = {
       borderColor: {
         // primary, secondary, tertiary, quaternary
         brand: {
-          quaternary: "var(--palette-brand-100)",
-          tertiary: "var(--palette-brand-300)",
+          quaternary: "var(--palette-brand-200)",
+          tertiary: "var(--palette-brand-400)",
           secondary: "var(--palette-brand-500)",
-          primary: "var(--palette-brand-700)",
+          primary: "var(--palette-brand-600)",
         },
         neutral: {
-          quaternary: "var(--palette-neutral-100)",
-          tertiary: "var(--palette-neutral-300)",
+          quaternary: "var(--palette-neutral-200)",
+          tertiary: "var(--palette-neutral-400)",
           secondary: "var(--palette-neutral-500)",
-          primary: "var(--palette-neutral-700)",
+          primary: "var(--palette-neutral-600)",
         },
         success: {
-          quaternary: "var(--palette-success-100)",
-          tertiary: "var(--palette-success-300)",
+          quaternary: "var(--palette-success-200)",
+          tertiary: "var(--palette-success-400)",
           secondary: "var(--palette-success-500)",
-          primary: "var(--palette-success-700)",
+          primary: "var(--palette-success-600)",
         },
         warning: {
-          quaternary: "var(--palette-warning-100)",
-          tertiary: "var(--palette-warning-300)",
+          quaternary: "var(--palette-warning-200)",
+          tertiary: "var(--palette-warning-400)",
           secondary: "var(--palette-warning-500)",
-          primary: "var(--palette-warning-700)",
+          primary: "var(--palette-warning-600)",
         },
         error: {
-          quaternary: "var(--palette-error-100)",
-          tertiary: "var(--palette-error-300)",
+          quaternary: "var(--palette-error-200)",
+          tertiary: "var(--palette-error-400)",
           secondary: "var(--palette-error-500)",
-          primary: "var(--palette-error-700)",
+          primary: "var(--palette-error-600)",
         },
       },
       borderRadius: {
@@ -247,17 +350,6 @@ const config: Config = {
         sm: "calc(var(--radius) - 2px)",
         xs: "calc(var(--radius) - 4px)",
         xxs: "calc(var(--radius) - 6px)",
-        none: "0",
-      },
-      spacing: {
-        xxxl: "32px",
-        xxl: "28px",
-        xl: "24px",
-        lg: "20px",
-        md: "16px",
-        sm: "12px",
-        xs: "8px",
-        xxs: "4px",
         none: "0",
       },
       keyframes: {
