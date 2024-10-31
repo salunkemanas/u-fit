@@ -1,26 +1,17 @@
 import type { PropsWithChildren } from "react";
 import TypographyComponentsVariantsMap from "./TypographyVariants";
-
-type TypographyProps = {
-  variant:
-    | "h1"
-    | "h2"
-    | "h3"
-    | "h4"
-    | "p"
-    | "blockquote"
-    | "lead"
-    | "large"
-    | "small"
-    | "muted";
-
-  className?: string;
-};
+import { TypographyStyles } from "./styles";
+import { cn } from "../../utils";
 
 export default function Typography(props: PropsWithChildren<TypographyProps>) {
-  const { variant } = props;
+  const { variant, color, className } = props;
 
   const Component = TypographyComponentsVariantsMap[variant];
+  const typographyClassName = TypographyStyles({ color });
 
-  return <Component className={props.className}>{props.children}</Component>;
+  return (
+    <Component className={cn(typographyClassName, className)}>
+      {props.children}
+    </Component>
+  );
 }
