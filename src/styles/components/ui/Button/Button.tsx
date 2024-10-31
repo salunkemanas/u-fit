@@ -1,12 +1,20 @@
 import type { PropsWithChildren } from "react";
-import { Button as BaseButton, type ButtonProps } from "../../base/button";
+import { cn } from "@/styles/components/utils";
+import {
+  Button as BaseButton,
+  type ButtonProps as BaseButtonProps,
+} from "../../base/button";
+import clsx from "clsx";
+import { ButtonProps } from "./types";
+import { ButtonStyles } from "./styles";
 
-type MyButtonProps = Pick<
-  ButtonProps,
-  "onClick" | "disabled" | "variant" | "size" | "color" | "className"
->;
+export default function Button(props: PropsWithChildren<ButtonProps>) {
+  const { children, size, variant, color, className, ...rest } = props;
+  const buttonClassName = ButtonStyles({ size, variant, color });
 
-export default function Button(props: PropsWithChildren<MyButtonProps>) {
-  const { children, ...rest } = props;
-  return <BaseButton {...rest}>{children}</BaseButton>;
+  return (
+    <BaseButton {...rest} className={cn(clsx(buttonClassName, className))}>
+      {children}
+    </BaseButton>
+  );
 }
