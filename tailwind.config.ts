@@ -9,7 +9,7 @@ const config: Config = {
     "./src/styles/**",
   ],
   theme: {
-    spacing: {
+    padding: {
       xxxl: "32px",
       xxl: "28px",
       xl: "24px",
@@ -20,6 +20,29 @@ const config: Config = {
       xxs: "4px",
       none: "0",
     },
+    margin: {
+      xxxl: "32px",
+      xxl: "28px",
+      xl: "24px",
+      lg: "20px",
+      md: "16px",
+      sm: "12px",
+      xs: "8px",
+      xxs: "4px",
+      none: "0",
+    },
+    gap: {
+      xxxl: "32px",
+      xxl: "28px",
+      xl: "24px",
+      lg: "20px",
+      md: "16px",
+      sm: "12px",
+      xs: "8px",
+      xxs: "4px",
+      none: "0",
+    },
+
     // ref: https://tailwindcss.com/docs/screens#using-custom-screen-names
     screens: {
       // => @media (min-width: 640px) { ... }
